@@ -1,0 +1,21 @@
+.font2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.selected{
+    color: green;
+}
+.shop{
+    color: green;
+    font-size: large;
+}
+.page-right{
+    float: right;
+}
+.horizontal{
+    display: flex; /* Enables flexbox */
+    gap: 10px; /* Adds spacing between items */
+}
+.bar-color{
+    background-color: beige;
+}
