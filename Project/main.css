@@ -1,5 +1,5 @@
 .font2{
-    font-family: 'Times New Roman', Times, serif; /* font for special items (logo/homepage)*/
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .selected{
@@ -9,34 +9,29 @@
     color: green;
     font-size: large;
 }
+body {
+    background-color:beige; 
+}
+.page-right{
+    float: right;
+}
 .horizontal{
     display: flex; /* Enables flexbox */
     gap: 10px; /* Adds spacing between items */
 }
 .bar-color{
-    background-color: whitesmoke;
+    background-color: beige;
 }
-.stat{
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    /*top: 20%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);*/
+.navbar .nav-link.selected {
+    font-weight: bold;
+    text-decoration: underline;
 }
-.open{
-    background-color: #cce7c9;
+.table-box {
+    max-width: 1000px; /* Adjust width as needed */
+    border: 1px solid #ddd; 
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9; 
+}.table-box .table {
+    margin: 0;
 }
-.close{
-    background-color: #ff6b6b;
-}
-.text-center{
-    text-align: center;
-}
-@media (max-width: 576px) {
-    .mobile-padding {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
