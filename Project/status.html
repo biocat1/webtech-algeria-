@@ -9,34 +9,56 @@
     <link href="main.css" rel="stylesheet">
     <script src="main.js"></script>
     <title>Shop Status</title>
+    <style>
+        .status-box {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .status-open {
+            background-color: green;
+        }
+
+        .status-closed {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bar-color">
         <div class="container-fluid horizontal">
-          <a class="navbar-brand shop font2" href="#" onclick="toHome()">Algerian Food | Siddiq</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav navbar-right">
-              <li class="nav-item">
-                <a class="nav-link" onclick="toMenu()">Menu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link selected" onclick="toStatus()">Shop Status</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="toContact()">Contact Us</a>
-              </li>  
-              <li class="nav-item">
-                <a class="nav-link" onclick="toOrder()">Order Here</a>
-              </li> 
-            </ul>
-          </div>
+            <a class="navbar-brand shop font2" href="#" onclick="toHome()">Algerian Food | Siddiq</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="toMenu()">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link selected" onclick="toStatus()">Shop Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="toContact()">Contact Us</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="toOrder()">Order Here</a>
+                    </li> 
+                </ul>
+            </div>
         </div>
-      </nav>   
-      <p> </p>
-      <div class="table-box mx-auto mt-4 p-3">
+    </nav>   
+
+    <!-- Open/Closed Section -->
+    <div id="statusIndicator" class="status-box mt-4 mx-auto"></div>
+
+    <!-- Operating Hours -->
+    <div class="table-box mx-auto mt-4 p-3">
         <h4 class="text-center">Shop Operating Hours</h4>
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
@@ -85,5 +107,39 @@
             </tbody>
         </table>
     </div>
+
+    <script>
+        function checkShopStatus() {
+            const statusIndicator = document.getElementById("statusIndicator");
+            const currentDay = new Date().getDay(); // 0 = Sunday, 1 = Monday, blabla
+            const currentTime = new Date().getHours() * 60 + new Date().getMinutes(); // Convert to minutes since midnight
+
+            // Define shop hours (in minutes) for each day
+            const shopHours = {
+                1: { open: 540, close: 1080 }, // Monday: 9:00 AM to 6:00 PM
+                2: { open: 540, close: 1080 }, // Tuesday: 9:00 AM to 6:00 PM
+                3: { open: 540, close: 1080 }, // Wednesday: 9:00 AM to 6:00 PM
+                4: { open: 540, close: 1080 }, // Thursday: 9:00 AM to 6:00 PM
+                5: { open: 540, close: 1200 }, // Friday: 9:00 AM to 8:00 PM
+                6: { open: 600, close: 960 },  // Saturday: 10:00 AM to 4:00 PM
+                0: null // Sunday: Closed
+            };
+
+            const todayHours = shopHours[currentDay];
+
+            if (todayHours && currentTime >= todayHours.open && currentTime <= todayHours.close) {
+                statusIndicator.textContent = "The shop is currently OPEN";
+                statusIndicator.classList.add("status-open");
+                statusIndicator.classList.remove("status-closed");
+            } else {
+                statusIndicator.textContent = "The shop is currently CLOSED";
+                statusIndicator.classList.add("status-closed");
+                statusIndicator.classList.remove("status-open");
+            }
+        }
+
+        // Call the function on page load
+        checkShopStatus();
+    </script>
 </body>
 </html>
