@@ -1,5 +1,5 @@
 .font2{
-    font-family: 'Times New Roman', Times, serif ;
+    font-family: 'Times New Roman', Times, serif; /* font for special items (logo/homepage)*/
 }
 
 .selected{
@@ -9,13 +9,34 @@
     color: green;
     font-size: large;
 }
-.page-right{
-    float: right;
-}
 .horizontal{
     display: flex; /* Enables flexbox */
     gap: 10px; /* Adds spacing between items */
 }
 .bar-color{
-    background-color: beige;
+    background-color: whitesmoke;
 }
+.stat{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    /*top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+}
+.open{
+    background-color: #cce7c9;
+}
+.close{
+    background-color: #ff6b6b;
+}
+.text-center{
+    text-align: center;
+}
+@media (max-width: 576px) {
+    .mobile-padding {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
