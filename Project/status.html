@@ -10,7 +10,7 @@
     <script src="main.js"></script>
     <title>Shop Status</title>
 </head>
-<body onload="showStatus()">
+<body>
     <nav class="navbar navbar-expand-sm bar-color">
         <div class="container-fluid horizontal">
           <a class="navbar-brand shop font2" href="#" onclick="toHome()">Algerian Food | Siddiq</a>
@@ -18,35 +18,72 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="nav nav-tabs navbar-nav navbar-right">
+            <ul class="navbar-nav navbar-right">
               <li class="nav-item">
-                <a class="nav-link" onclick="toMenu()"href="#" >Menu</a>
+                <a class="nav-link" onclick="toMenu()">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link selected" onclick="toStatus()"href="#" >Shop Status</a>
+                <a class="nav-link selected" onclick="toStatus()">Shop Status</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" onclick="toContact()"href="#" >Contact Us</a>
+                <a class="nav-link" onclick="toContact()">Contact Us</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link" onclick="toOrder()"href="#" >Order Here</a>
+                <a class="nav-link" onclick="toOrder()">Order Here</a>
               </li> 
             </ul>
           </div>
         </div>
-      </nav>
-      
-      <div class="d-flex flex-column justify-content-start align-items-center vh-100 pt-5 mobile-padding">
-        <div class="open stat container text-center mb-5 p-3 px-5" id="statusShow">
-          <h4 id="show">Our shop is closed for now</h4>
-          <p id="demo">hehe</p>
-        </div>
-        <div class="stat container text-center mb-3 p-3">
-          <p>Hellooo</p>
-        </div>
-        <div class="stat container text-center p-3">
-          <p>Hellooo</p>
-        </div>
-      </div>      
+      </nav>   
+      <p> </p>
+      <div class="table-box mx-auto mt-4 p-3">
+        <h4 class="text-center">Shop Operating Hours</h4>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Day</th>
+                    <th>Opening Time</th>
+                    <th>Closing Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>9:00 AM</td>
+                    <td>6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>9:00 AM</td>
+                    <td>6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>9:00 AM</td>
+                    <td>6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>9:00 AM</td>
+                    <td>6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>9:00 AM</td>
+                    <td>8:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>10:00 AM</td>
+                    <td>4:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
