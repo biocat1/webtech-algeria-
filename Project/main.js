@@ -7,7 +7,7 @@ function toStatus(){
 function toContact(){
     window.location="contact.html";
 }
-function toOrder(){
+function toOrder() {
     window.location="orderPage.html";
 }
 function toHome(){
