@@ -15,7 +15,7 @@ function toHome(){
 }
 function modeChange() {
     var element = document.body;
-    element.classList.toggle("dark-mode"); /* ignore dulu still experiment*/
+    element.classList.toggle("dark-mode"); // ignore dulu still experiment
  }
 
 function showStatus(){
