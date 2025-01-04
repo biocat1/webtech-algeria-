@@ -18,13 +18,23 @@ function modeChange() {
     element.classList.toggle("dark-mode"); // ignore dulu still experiment
  }
 
-function showStatus(){
+ function showStatus() {
     let d = new Date();
-    if(d.getHours() >= 23 || d.getHours() <= 9){
-        let element = document.getElementById("statusShow");
-        element.classList.remove("open");  // Remove open class
-        element.classList.add("close");  // Add close class
+    let currentHour = d.getHours();
 
-        document.getElementById("show").innerHTML ="Our shop is closed for now"
+    let element = document.getElementById("statusShow");
+
+    if (currentHour >= 9 && currentHour < 23) {
+        // Shop is open
+        element.classList.remove("close"); // Remove close class
+        element.classList.add("open");    // Add open class
+        document.getElementById("show").innerHTML = "Our shop is currently OPEN";
+    } else {
+        // Shop is closed
+        element.classList.remove("open"); // Remove open class
+        element.classList.add("close");   // Add close class
+        document.getElementById("show").innerHTML = "Our shop is closed for now";
     }
 }
+
+
