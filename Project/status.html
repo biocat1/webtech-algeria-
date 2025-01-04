@@ -10,30 +10,10 @@
     <script src="main.js"></script>
     <title>Shop Status</title>
     <style>
-        .open {
-            text-align: center;
-            background-color: green;
-            color: white;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-
-        .close {
-            text-align: center;
-            background-color: red;
-            color: white;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
+        
     </style>
 </head>
-<body>
+<body onload="showStatus()">
     <nav class="navbar navbar-expand-sm bar-color">
         <div class="container-fluid horizontal">
             <a class="navbar-brand shop font2" href="#" onclick="toHome()">Algerian Food | Siddiq</a>
@@ -41,18 +21,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav navbar-right">
+                <ul class="nav nav-tabs navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a class="nav-link" onclick="toMenu()">Menu</a>
+                        <a class="nav-link" onclick="toMenu()" href="#">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link selected" onclick="toStatus()">Shop Status</a>
+                        <a class="nav-link selected" onclick="toStatus()" href="#">Shop Status</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="toContact()">Contact Us</a>
+                        <a class="nav-link" onclick="toContact()" href="#">Contact Us</a>
                     </li>  
                     <li class="nav-item">
-                        <a class="nav-link" onclick="toOrder()">Order Here</a>
+                        <a class="nav-link" onclick="toOrder()" href="#">Order Here</a>
                     </li> 
                 </ul>
             </div>
@@ -60,7 +40,8 @@
     </nav>   
 
     <!-- Open/Closed Section -->
-    <div id="statusShow" class="close">
+     <div class="mobile-padding">
+    <div id="statusShow" class="close container">
         <p id="show"></p>
     </div>
 
@@ -114,10 +95,6 @@
             </tbody>
         </table>
     </div>
-
-    <script>
-        // Call showStatus from main.js when the page loads
-        document.addEventListener("DOMContentLoaded", showStatus);
-    </script>
+    </div>
 </body>
 </html>
