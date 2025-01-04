@@ -15,10 +15,33 @@ body {
     background-color:beige; 
     font-family: 'Newsreader', serif;
 
+
+
 .homepage h1 {
     font-size: 50px
 }
 
+}
+.open {
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.close {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    margin-top: 20px;
 }
 .page-right{
     float: right;
@@ -60,6 +83,10 @@ body {
     height: 200px;
     object-fit: cover;
 }
+.card-img-top {
+    height: 150px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensures images are cropped nicely */
+}
 .contact {
     text-align: center;
     margin-top: 2rem;
@@ -84,3 +111,9 @@ body {
 .contact-info {
     margin-top: 2rem;
 }
+@media (min-width: 0px) {
+    .mobile-padding {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
