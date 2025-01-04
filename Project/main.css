@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap');
+
 .font2{
     font-family: 'Times New Roman', Times, serif;
 }
@@ -11,6 +13,12 @@
 }
 body {
     background-color:beige; 
+    font-family: 'Newsreader', serif;
+
+.homepage h1 {
+    font-size: 50px
+}
+
 }
 .page-right{
     float: right;
