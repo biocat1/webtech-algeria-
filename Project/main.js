@@ -37,5 +37,14 @@ function modeChange() {
     }
 }
 
-
+function copyToClipboard(text) {
+    navigator.clipboard
+        .writeText(text)
+        .then(function () {
+            alert(`Copied: ${text}`);
+        })
+        .catch(function (error) {
+            console.error("Failed to copy text: ", error);
+        });
+}
 
