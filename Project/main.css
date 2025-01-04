@@ -44,3 +44,27 @@ body {
     height: 200px;
     object-fit: cover;
 }
+.container {
+    text-align: center;
+    margin-top: 2rem;
+}
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.icon-circle img {
+    width: 40%;
+    height: auto;
+}
+.contact-info {
+    margin-top: 2rem;
+}
