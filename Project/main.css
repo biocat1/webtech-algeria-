@@ -35,3 +35,12 @@ body {
 }.table-box .table {
     margin: 0;
 }
+
+.card {
+    height: 100%;
+    background-color:aliceblue;
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
