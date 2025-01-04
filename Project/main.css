@@ -51,7 +51,7 @@ body {
     gap: 10px; /* Adds spacing between items */
 }
 .bar-color{
-    background-color: beige;
+    background-color: #dfdacf;
 }
 .navbar .nav-link.selected {
     font-weight: bold;
