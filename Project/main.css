@@ -138,6 +138,24 @@ body {
     overflow: hidden; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+/* Center the form and set a smaller width */
+.form-wrapper {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 500px; /* Limit maximum width */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Make responsive for small screens */
+@media (max-width: 576px) {
+    .form-wrapper {
+        max-width: 90%; /* Use 90% width on very small screens */
+    }
+}
+
 /*.order-card {
     width: 50%;
     margin: 0 auto;

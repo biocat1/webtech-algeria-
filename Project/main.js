@@ -13,6 +13,9 @@ function toOrder(){
 function toHome(){
     window.location="homepage.html";
 }
+function toFeedback(){
+    window.location="feedback.html";
+}
 
 function showStatus() {
     let d = new Date();
@@ -40,3 +43,21 @@ function copyToClipboard(text) {
         console.error('Failed to copy: ', err);
     });
 }
+
+function handleFeedbackFormSubmission() {
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        // Success message
+        alert('Thank you for your feedback!');
+
+        // Clear the form
+        document.getElementById('feedbackForm').reset();
+    });
+}
+
+
+
+
+
+
+
