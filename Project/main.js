@@ -13,17 +13,6 @@ function toOrder(){
 function toHome(){
     window.location="homepage.html";
 }
-function toggleMode() {
-    let htmlElement = document.documentElement; // Get the <html> element
-    let currentTheme = htmlElement.getAttribute('data-bs-theme');
-
-    // Switch the theme
-    if (currentTheme === 'dark') {
-        htmlElement.setAttribute('data-bs-theme', 'light');
-    } else {
-        htmlElement.setAttribute('data-bs-theme', 'dark');
-    }
-}
 
  function showStatus() {
     let d = new Date();
