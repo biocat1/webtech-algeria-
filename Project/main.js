@@ -34,12 +34,9 @@ function showStatus() {
 }
 
 function copyToClipboard(text) {
-    navigator.clipboard
-        .writeText(text)
-        .then(function () {
-            alert(`Copied: ${text}`);
-        })
-        .catch(function (error) {
-            console.error("Failed to copy text: ", error);
-        });
+    navigator.clipboard.writeText(text).then(() => {
+        console.log('Copied to clipboard: ' + text);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
 }
