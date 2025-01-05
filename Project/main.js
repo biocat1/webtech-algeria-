@@ -13,9 +13,16 @@ function toOrder(){
 function toHome(){
     window.location="homepage.html";
 }
-function modeChange() {
-    var element = document.body;
-    element.classList.toggle("dark-mode"); // ignore dulu still experiment
+function toggleMode() {
+    let htmlElement = document.documentElement; // Get the <html> element
+    let currentTheme = htmlElement.getAttribute('data-bs-theme');
+
+    // Switch the theme
+    if (currentTheme === 'dark') {
+        htmlElement.setAttribute('data-bs-theme', 'light');
+    } else {
+        htmlElement.setAttribute('data-bs-theme', 'dark');
+    }
 }
 
  function showStatus() {
@@ -24,7 +31,7 @@ function modeChange() {
 
     let element = document.getElementById("statusShow");
 
-   if (currentHour >= 9 && currentHour < 23 && currentDay != 0) {
+    if (currentHour >= 9 && currentHour < 23 && currentDay != 0) {
         // Shop is open
         element.classList.remove("close"); // Remove close class
         element.classList.add("open");    // Add open class
