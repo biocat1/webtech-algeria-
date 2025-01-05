@@ -14,7 +14,7 @@ function toHome(){
     window.location="homepage.html";
 }
 
- function showStatus() {
+/* function showStatus() {
     let d = new Date();
     let currentHour = d.getHours(),currentDay = d.getDay();
 
@@ -31,7 +31,7 @@ function toHome(){
         element.classList.add("close");   // Add close class
         document.getElementById("show").innerHTML = "Our shop is CLOSED for now";
     }
-}
+} */
 
 function copyToClipboard(text) {
     navigator.clipboard
