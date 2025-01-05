@@ -73,11 +73,10 @@ body {
 
 .card {
     height: 100%;
-    background-color:aliceblue;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Zoom in */
+    transform: scale(1.1); /* Zoom in */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Highlight */
     transition: all 0.3s ease; /* Smooth transition */
     background-color: rgb(158, 205, 215);
