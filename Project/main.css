@@ -110,6 +110,8 @@ body {
     margin-top: 2rem;
 }
 .icon-circle {
+    width: 70px;
+    height: 70px;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -120,7 +122,7 @@ body {
     cursor: pointer;
 }
 .icon-circle img {
-    width: 40%;
+    width: 100%;
     height: auto;
 }
 .contact-info {
