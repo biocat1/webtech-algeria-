@@ -29,7 +29,7 @@ function showStatus() {
         // Shop is closed
         element.classList.remove("open"); // Remove open class
         element.classList.add("close");   // Add close class
-        document.getElementById("show").innerHTML = "Our shop is CLOSED for now";
+        document.getElementById("show").innerHTML = "Our shop is currently CLOSED";
     }
 }
 
