@@ -15,7 +15,11 @@ body {
     background-color:beige; 
     font-family: 'Newsreader', serif;
 
-
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+    }
 
 .homepage h1 {
     font-size: 50px
@@ -111,6 +115,26 @@ body {
 .contact-info {
     margin-top: 2rem;
 }
+
+/* Responsive map embed styling */
+.embed-map {
+    width: 50%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    border: 2px solid #ccc; /* Border with light gray color */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow effect */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+    .embed-map {
+        height: 300px; /* Adjust height for mobile */
+        width: 75%
+    }
+}
+
 @media (min-width: 0px) {
     .mobile-padding {
       padding-left: 1rem;
