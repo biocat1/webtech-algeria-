@@ -38,8 +38,10 @@ function showStatus() {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard: ' + text); // Alert after successful copy
         console.log('Copied to clipboard: ' + text);
     }).catch(err => {
+        alert('Failed to copy: ' + text); // Alert on failure
         console.error('Failed to copy: ', err);
     });
 }
