@@ -40,32 +40,35 @@
         <h1><b>Contact Us</b></h1>
         <p>We would love to hear from you! Feel free to reach out using the details below.</p>
 
-        <div class="row contact-info">
+        <div class="card contact-card mx-auto" style="max-width: 1200px; max-height: 1200px;">
+            <div class="row contact-info">
+
             <!-- Address -->
-            <div class="col-md-4">
-                <div class="icon-circle">
-                    <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Address Icon" onclick="window.open('https://maps.app.goo.gl/vQRxDP2AB7MWFGxZ8')">
+                <div class="col-md-4">
+                    <div class="icon-circle" onclick="window.open('https://maps.app.goo.gl/vQRxDP2AB7MWFGxZ8')" title="Open in Google Maps">
+                        <img src="images/maps.png" width="100" height="100" alt="Address Icon">
+                    </div>
+                    <h5><b>Address</b></h5>
+                    <p>Mahallah Siddiq Cafe, International Islamic University Malaysia, Jalan Sg Pusu, 53100, Gombak, Selangor</p>
                 </div>
-                <h5><b>Address</b></h5>
-                <p>Mahallah Siddiq Cafe, International Islamic University Malaysia, Jalan Sg Pusu, 53100, Gombak, Selangor</p>
-            </div>
 
             <!-- Phone/WhatsApp -->
-            <div class="col-md-4">
-                <div class="icon-circle" onclick="copyToClipboard('+60 123 4567')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon">
+                <div class="col-md-4">
+                    <div class="icon-circle" onclick="window.open('https://wa.me/601234567', '_blank')">
+                        <img src="images/whatsapp.png" width="100" height="100" alt="Phone Icon" title="Open in WhatsApp">
+                    </div>
+                    <h5><b>Phone/WhatsApp</b></h5>
+                    <a href="#" title="Click to copy the phone number" onclick="copyToClipboard('+60 123 4567'); alert('Phone number copied to clipboard!'); return false;">+60 123 4567</a>
                 </div>
-                <h5><b>Phone/WhatsApp</b></h5>
-                <a href="https://wa.me/601234567" target="_blank">+60 123 4567</a>
-            </div>
 
             <!-- Email -->
-            <div class="col-md-4">
-                <div class="icon-circle" onclick="copyToClipboard('contactus@segategi.com.my')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon">
+                <div class="col-md-4">
+                    <div class="icon-circle" onclick="window.open('mailto:contactus@segategi.com.my', '_blank')">
+                        <img src="images/gmail.png" width="100" height="100" alt="Email Icon" title="Open in Gmail">
+                    </div>
+                    <h5><b>Email</b></h5>
+                    <a href="#" title="Click to copy the email address" onclick="copyToClipboard('contactus@segategi.com.my'); alert('Email address copied to clipboard!'); return false;">contactus@segategi.com.my</a>
                 </div>
-                <h5><b>Email</b></h5>
-                <a href="mailto:contactus@segategi.com.my">contactus@segategi.com.my</a>
             </div>
         </div>
     </div>
