@@ -91,14 +91,25 @@ body {
     height: 150px; /* Set a fixed height for consistency */
     object-fit: cover; /* Ensures images are cropped nicely */
 }
+.contact-card {
+    border-radius: 12px; /* Slight rounding */
+    box-shadow: none; /* No hover shadow */
+    transition: none; /* Remove hover transitions */
+}
+.contact-card:hover {
+    transform: none; /* Disable hover zoom */
+    box-shadow: none; /* Disable hover shadow */
+    background-color: aliceblue; /* Keep static background */
+}
+.icon-circle img:hover {
+    filter: brightness(0.7); /* Darkens the icon */
+    transition: 0.3s; /* Smooth transition */
+}
 .contact {
     text-align: center;
     margin-top: 2rem;
 }
 .icon-circle {
-    width: 70px;
-    height: 70px;
-    background-color: #007bff;
     color: white;
     border-radius: 50%;
     display: flex;
