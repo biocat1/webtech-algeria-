@@ -48,7 +48,7 @@ function handleFeedbackFormSubmission() {
     document.getElementById('feedbackForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
         // Success message
-        alert('Thank you for your feedback!');
+        document.getElementById('feedbackForm').insertAdjacentHTML('afterend', '<br><p class="text-success">Thank you for your feedback!</p></br>');
 
         // Clear the form
         document.getElementById('feedbackForm').reset();
