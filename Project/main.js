@@ -31,7 +31,7 @@ function toHome(){
         element.classList.add("close");   // Add close class
         document.getElementById("show").innerHTML = "Our shop is CLOSED for now";
     }
-} */
+} */ 
 
 function copyToClipboard(text) {
     navigator.clipboard
